@@ -4,6 +4,9 @@
 
 <div class="ui raised very padded text container segment login">
 
+<p><strong>NOTE:</strong>At the moment, SpotGuru can only support a maximum of 5 total seeds.</p>
+<p>Additionally, keep in mind that the algorithm is easily frightened, and may struggle with extremely diverse seeds.</p>
+
 <%= form_tag '/playlists/fix', method: "post", class: "ui form" do %>
   <%= label_tag :name %>
   <%= text_field_tag :name %>
