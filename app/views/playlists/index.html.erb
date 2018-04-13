@@ -10,6 +10,6 @@
 <% end %>
 <br>
   <% @playlists.each do |playlist| %>
-    <p style="font-size:25px"><%= link_to playlist.name.downcase, playlist %> - by <%= link_to playlist.user.downcase, playlist.user %></p>
+    <p style="font-size:25px"><%= link_to playlist.name.downcase, playlist %></p>
   <% end %>
 </div>
