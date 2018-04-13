@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :destroy, :show]
   get '/signup', to: 'users#new', as: "signup"
   get '/login', to: 'sessions#new'
+  get '/help', to: 'sessions#help'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   get '/playlists/:id/generate', to: 'playlists#generate'
