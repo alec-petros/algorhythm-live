@@ -2,9 +2,12 @@
   <p id="username_header"><%= @user.display_name %> - <%= @user.username %></p>
 
   <div id="spotify_link"><% if @user.id == session[:user_id] %>
-    <!-- <button class="sign_in ui green button" href="/auth/spotify">Sign In With Spotify</button> -->
-    <p class="spotify_link"><%= link_to 'Sign in with Spotify', '/auth/spotify' %></p>
-      <% end %>
+    <% if !current_user.spot_hash.empty? %>
+      <p class="spotify_link"><%= link_to 'Sign in with Spotify', '/auth/spotify' %></p>
+    <% else %>
+      <p>Connected to a Spotify account.</p>
+    <% end %>
+  <% end %>
   </div>
 </div>
 <br>
