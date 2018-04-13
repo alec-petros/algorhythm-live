@@ -4,7 +4,6 @@ require 'rspotify'
 
 require 'rails/all'
 
-RSpotify.authenticate(client_id, client_secret)
 
 
 # Require the gems listed in Gemfile, including any gems
@@ -21,3 +20,5 @@ module SpotifyPlaylister
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+RSpotify.authenticate(Rails.application.secrets.SPOT_ID, Rails.application.secrets.SPOT_SECRET)
