@@ -4,7 +4,7 @@ require 'rspotify'
 
 require 'rails/all'
 
-RSpotify.authenticate("2bddb2de8f6b4b7792f99cdb8aecbe19", "a5f9a55ab0db42f68a3c02cdab76fb61")
+RSpotify.authenticate(client_id, client_secret)
 
 
 # Require the gems listed in Gemfile, including any gems
