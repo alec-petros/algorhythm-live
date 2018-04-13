@@ -5,7 +5,7 @@
     <% if current_user.spot_hash.empty? %>
       <p class="spotify_link"><%= link_to 'Sign in with Spotify', '/auth/spotify' %></p>
     <% else %>
-      <p>Connected to a Spotify account.</p>
+      <p style="font-size: 15px;">Connected to a Spotify account.</p>
     <% end %>
   <% end %>
   </div>
