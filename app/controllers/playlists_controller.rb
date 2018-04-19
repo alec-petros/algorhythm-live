@@ -1,7 +1,6 @@
 class PlaylistsController < ApplicationController
 
   before_action :require_login
-  skip_before_action :require_login, only: [:index]
 
   def index
     case params[:option]
