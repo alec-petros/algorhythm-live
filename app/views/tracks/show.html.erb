@@ -1,7 +1,7 @@
 <div class="ui raised very padded text container segment">
 
 <div class="show_block">
-  <h1 id="artist_name"><%= @track.name %>   <% if @track.external_url %><a href="<%= @track.external_url %>" alt="Play On Spotify"> <%= image_tag "spot_play.png", height: '25', width: '25' %> </a> <% end %> </h1>
+  <h1 id="artist_name"><%= @track.name %>   <% if @track.try(:external_url) %><a href="<%= @track.external_url %>" alt="Play On Spotify"> <%= image_tag "spot_play.png", height: '25', width: '25' %> </a> <% end %> </h1>
   <div class="ui divider"></div>
 
   <h3><%= link_to @track.artist.name, @track.artist %></h3> <br>
