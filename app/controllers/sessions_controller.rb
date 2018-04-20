@@ -26,6 +26,9 @@ class SessionsController < ApplicationController
   end
 
   def home
+    if session[:user_id]
+      redirect_to '/playlists'
+    end
   end
 
   def help

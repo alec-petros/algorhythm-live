@@ -162,5 +162,7 @@
 body {
    background-image: url("silhouette.jpg");
    background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
    /* background-color: #cccccc; */
 }

@@ -70,6 +70,7 @@ class Track < ApplicationRecord
       spot_id: track.id,
       artist: Artist.find_artist(artist),
       images: track.album.images,
+      external_url: track.external_urls["spotify"],
       acousticness: track.audio_features.acousticness,
       danceability: track.audio_features.danceability,
       energy: track.audio_features.energy,
