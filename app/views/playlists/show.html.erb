@@ -4,6 +4,9 @@
 <% if flash[:notice] %>
   <div class="notice ui railsed very padded text container segment"><%= flash[:notice] %></div>
 <% end %>
+<% if @playlist.artists.length + @playlist.genres.length + @playlist.tracks.length > 5 %>
+  <div class="notice ui railsed very padded text container segment">Warning: You have more than 5 total seeds. This will cause the Spotify API to fail to generate a playlist. You can use the Edit button to refine your seeds.</div>
+<% end %>
 <div class="playlist_display ui raised very padded text container segment">
   <% if !@playlist.artists.empty? %>
     <label id="headers">Artists</label>
