@@ -23,6 +23,12 @@
    font-size: 24px;
    font-family: 'Orbitron', sans-serif;
  }
+ .edit_user {
+   font-size: 14px;
+ }
+ .edit_user a {
+   color: black;
+ }
 .pusher {
   width: 70%;
   /* max-width: 1000px; */
