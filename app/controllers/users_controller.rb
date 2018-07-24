@@ -29,7 +29,12 @@ class UsersController < ApplicationController
 
   def edit
     set_user
+  end
 
+  def update
+    set_user
+    @user.update(user_params)
+    redirect_to @user
   end
 
   private

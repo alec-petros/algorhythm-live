@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :genres, only: [:show]
   resources :tracks, only: [:show]
   resources :playlists
-  resources :users, only: [:create, :destroy, :show, :edit]
+  resources :users, only: [:create, :destroy, :show, :edit, :update]
   get '/signup', to: 'users#new', as: "signup"
   get '/login', to: 'sessions#new'
   get '/help', to: 'sessions#help'

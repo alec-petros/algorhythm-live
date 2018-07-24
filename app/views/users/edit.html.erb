@@ -1,0 +1,10 @@
+<%= form_for @user, class: "edit_user_form", url: {action: "update"} do |f| %>
+
+  <%= f.label "Username" %>
+  <%= f.text_field :username, value: @user.username %>
+  <br>
+  <%= f.label "Display Name" %>
+  <%= f.text_field :display_name, value: @user.display_name %>
+  <br>
+  <%= f.submit "Save Changes" %>
+<% end %>

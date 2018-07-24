@@ -29,6 +29,15 @@
  .edit_user a {
    color: black;
  }
+ #edit_user_1 {
+   font-size: 16px;
+   position: absolute;
+   left: 50%;
+   top: 25%;
+ }
+ #sidebar {
+   box-shadow: 3px 0px 20px #888888;
+ }
 .pusher {
   width: 70%;
   /* max-width: 1000px; */
