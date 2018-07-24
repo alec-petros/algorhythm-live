@@ -57,7 +57,7 @@ class PlaylistsController < ApplicationController
       @playlist_array = @playlist.generate(params[:num]).tracks
       @uri_array = @playlist_array.map(&:uri)
     rescue
-      flash[:notice] = "Failed to generate playlist. Try slimming down your seeds."
+      flash[:notice] = "Failed to generate playlist. Try limiting yourself to 5 total seeds."
       redirect_to @playlist
     end
   end

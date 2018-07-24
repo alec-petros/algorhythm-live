@@ -1,6 +1,13 @@
 <div class="playlist_title ui raised very padded text container segment">
   <p id="username_header"><%= @user.display_name %> - <%= @user.username %></p>
 
+  <% if @user.id == session[:user_id] %>\
+    <div class="edit_button">
+      <button type="button" name="edit_user"><%= link_to "Edit User", edit_user_path(@user) %></button>
+    </div>
+  <% end %>
+
+
   <div id="spotify_link"><% if @user.id == session[:user_id] %>
     <% if current_user.spot_hash.empty? %>
       <p class="spotify_link"><%= link_to 'Sign in with Spotify', '/auth/spotify' %></p>
