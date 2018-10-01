@@ -4,6 +4,8 @@
     <title>Algorhythm</title>
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <%= csrf_meta_tags %>
 
     <title>Semantic UI CDN</title>
@@ -41,26 +43,31 @@
     </div> -->
 
   <header>
-    <div class="container">
+    <div class="topnav" id="myTopnav">
 
-      <a href="#" class="logo">Algorhythm</a>
+      <a href="/playlists" class="logo">Algorhythm</a>
 
       <nav>
         <ul>
-          <li><a href="">ABOUT</a></li>
-          <li><a href="">HELP</a></li>
-          <li><a href="">NEW PLAYLIST</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/help">HELP</a></li>
+          <li><a href="/playlists/new">NEW PLAYLIST</a></li>
 
           <% if !logged_in? %>
-            <li><a href="">LOGIN</a></li>
-            <li><a href="">SIGNUP</a></li>
+            <li><a href="/login">LOGIN</a></li>
+            <li><a href="/signup">SIGNUP</a></li>
           <% else %>
-            <li><a href="">PROFILE</a></li>
-            <li><a href="">LOGOUT</a></li>
+            <li><a href="<%= "/users/#{session[:user_id]}" %>">PROFILE</a></li>
+            <li><a href="/logout">LOGOUT</a></li>
           <% end %>
+
+          <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
 
         </ul>
       </nav>
+
+
+
     </div>
   </header>
 
@@ -68,5 +75,20 @@
     <div class="pusher">
       <%= yield %>
     </div>
+
+
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
   </body>
+
 </html>
