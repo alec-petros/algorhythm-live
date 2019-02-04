@@ -70,7 +70,7 @@ class Track < ApplicationRecord
       spot_id: track.id,
       artist: Artist.find_artist(artist),
       images: track.album.images,
-      external_url: track.external_url,
+      external_url: track.external_urls["spotify"],
       acousticness: track.audio_features.acousticness,
       danceability: track.audio_features.danceability,
       energy: track.audio_features.energy,
@@ -83,6 +83,7 @@ class Track < ApplicationRecord
       key: track.audio_features.key,
       mode: track.audio_features.mode)
     output.save
+    byebug
     output
   end
 
