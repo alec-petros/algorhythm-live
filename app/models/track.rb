@@ -83,7 +83,6 @@ class Track < ApplicationRecord
       key: track.audio_features.key,
       mode: track.audio_features.mode)
     output.save
-    byebug
     output
   end
 
